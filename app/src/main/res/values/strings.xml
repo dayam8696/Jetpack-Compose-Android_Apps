@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Jetpack-Compose-Android App</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
 </resources>
