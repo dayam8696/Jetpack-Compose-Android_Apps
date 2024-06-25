@@ -118,7 +118,7 @@ fun Title() {
 fun DefaultPreview() {
     Surface(modifier = Modifier.fillMaxSize()) {
     }
-    Column {
+   Column {
         ListViewtwo(R.drawable.image ,"Dayam Nadeem" ,"Software Develpoer")
         ListViewtwo(R.drawable.image ,"Cool Dz" ,"Software Develpoer")
 
