@@ -7,6 +7,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -26,6 +28,7 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
@@ -34,6 +37,7 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -114,8 +118,18 @@ fun Title() {
 fun DefaultPreview() {
     Surface(modifier = Modifier.fillMaxSize()) {
     }
+    Column {
+        ListViewtwo(R.drawable.image ,"Dayam Nadeem" ,"Software Develpoer")
+        ListViewtwo(R.drawable.image ,"Cool Dz" ,"Software Develpoer")
 
-    UseCard()
+        ListViewtwo(R.drawable.image ,"Dayam Nadeem" ,"Software Develpoer")
+        ListViewtwo(R.drawable.image ,"Dayam Nadeem" ,"Software Develpoer")
+        ListViewtwo(R.drawable.image ,"Dayam Nadeem" ,"Software Develpoer")
+        ListViewtwo(R.drawable.image ,"Dayam Nadeem" ,"Software Develpoer")
+    }
+
+
+
 
 }
 
@@ -143,6 +157,26 @@ fun TextInput(){
         label = {Text(text = "Enter the message ")}
         
     )
+}
+
+@Preview(showBackground = true , widthDp = 300 , heightDp = 500)
+@Composable
+private fun PreviewFunction(){
+
+}
+@Composable
+fun ListViewtwo(imgId :Int , name :String ,occupation : String){
+Row (Modifier.padding(8.dp)){
+    Image(painter = painterResource(imgId), contentDescription =null,
+        Modifier.size(80.dp))
+    Column() {
+        Text(text = name
+            , fontWeight = FontWeight.Bold)
+        Text(text = occupation
+            ,
+            fontSize = 12.sp)
+    }
+}
 }
 
 
