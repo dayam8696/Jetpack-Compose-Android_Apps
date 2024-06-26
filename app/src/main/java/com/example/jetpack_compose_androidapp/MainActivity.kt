@@ -6,6 +6,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -31,6 +33,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.colorResource
@@ -162,6 +165,17 @@ fun TextInput(){
 @Preview(showBackground = true , widthDp = 300 , heightDp = 500)
 @Composable
 private fun PreviewFunction(){
+Text(text = "Dayam",
+    color = Color.White,
+        modifier = Modifier.background(Color.Blue)
+            .size(200.dp)
+            .padding(36.dp)
+            .border(4.dp , Color.Red)
+            .clip(CircleShape)
+            .background(Color.Yellow)
+            .clickable {  }
+
+    )
 
 }
 @Composable
