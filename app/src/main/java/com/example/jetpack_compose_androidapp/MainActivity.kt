@@ -50,7 +50,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-        TextInput()
+        PreviweItem()
 
         }
     }
@@ -167,13 +167,14 @@ fun TextInput(){
 private fun PreviewFunction(){
 Text(text = "Dayam",
     color = Color.White,
-        modifier = Modifier.background(Color.Blue)
+        modifier = Modifier
+            .background(Color.Blue)
             .size(200.dp)
             .padding(36.dp)
-            .border(4.dp , Color.Red)
+            .border(4.dp, Color.Red)
             .clip(CircleShape)
             .background(Color.Yellow)
-            .clickable {  }
+            .clickable { }
 
     )
 
